@@ -12,7 +12,7 @@ const UserForm = () => {
   const [oldPassword, setOldPassword] = useState("");
   const [message, setMessage] = useState({ type: "", text: "" });
 
-  // 👁 toggle states
+
   const [showPassword, setShowPassword] = useState(false);
   const [showOldPassword, setShowOldPassword] = useState(false);
 
@@ -29,12 +29,12 @@ const UserForm = () => {
     try {
       const updateData = {};
 
-      // ✅ update name
+   
       if (fullName) {
         updateData.fullName = fullName;
       }
 
-      // ✅ update password only if entered
+  
       if (password) {
         if (!oldPassword) {
           return setMessage({
@@ -58,7 +58,7 @@ const UserForm = () => {
         text: result.data.message || "Profile updated successfully",
       });
 
-      // clear password fields
+     
       setPassword("");
       setOldPassword("");
     } catch (error) {

@@ -103,7 +103,7 @@ function UserCard() {
 
   return (
     <div className="p-5 w-[90%]">
-      {/* 🔥 LOADING */}
+      {/*  LOADING */}
       {loading && (
         <div className="text-center py-4">
           <span className="text-blue-500 font-medium">Loading users...</span>

@@ -11,7 +11,7 @@ function useGetManagers(page, search) {
     const delay = setTimeout(() => {
       const fetchManagers = async () => {
         try {
-          dispatch(setManager([])); // ✅ clear old managers
+          dispatch(setManager([])); 
 
           const url = search
             ? `${serverUrl}/api/user/get-manager?page=${page}&limit=5&search=${search}`
@@ -29,7 +29,7 @@ function useGetManagers(page, search) {
       };
 
       fetchManagers();
-    }, 400); // ✅ same debounce as users
+    }, 400); 
 
     return () => clearTimeout(delay);
   }, [page, search, dispatch]);

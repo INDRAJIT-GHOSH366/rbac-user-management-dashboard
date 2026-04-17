@@ -38,9 +38,9 @@ function SignIn() {
       dispatch(setUserData(result.data));
       setErr("");
       setLoading(false);
-      console.log(result);
+      
     } catch (error) {
-      console.log("Backend error message:", error.response?.data);
+      
       setErr(error.response.data.message);
       setLoading(false);
     }
@@ -49,7 +49,7 @@ function SignIn() {
     try {
       const provider = new GoogleAuthProvider();
       const result = await signInWithPopup(auth, provider);
-      console.log(result);
+    
       const { data } = await axios.post(
         `${serverUrl}/api/auth/google-auth`,
         {
@@ -59,9 +59,9 @@ function SignIn() {
       );
       dispatch(setUserData(data));
       setErr("");
-      console.log(data);
+     
     } catch (error) {
-      console.log(error);
+      
       setErr(error.response.data.message);
     }
   };

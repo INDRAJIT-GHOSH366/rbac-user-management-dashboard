@@ -15,7 +15,7 @@ const Profile = () => {
   const [oldPassword, setOldPassword] = useState("");
   const [message, setMessage] = useState({ type: "", text: "" });
 
-  // 👁 toggle states
+
   const [showPassword, setShowPassword] = useState(false);
   const [showOldPassword, setShowOldPassword] = useState(false);
 

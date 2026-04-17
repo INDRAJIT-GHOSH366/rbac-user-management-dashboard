@@ -10,7 +10,7 @@ import Profile from "./pages/Profile";
 import AddUser from "./pages/AddUser";
 import { Toaster } from "react-hot-toast";
 
-export const serverUrl = "http://localhost:8000";
+export const serverUrl = "https://rbac-user-management-backend.onrender.com";
 
 function App() {
   useGetCurrentUser();

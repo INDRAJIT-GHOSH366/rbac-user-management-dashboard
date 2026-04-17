@@ -24,7 +24,7 @@ function useGetUsers(page, search) {
         } catch (error) {
           console.log(error);
         } finally {
-          dispatch(setLoading(false)); // ✅ always stop loading
+          dispatch(setLoading(false));
         }
       };
 

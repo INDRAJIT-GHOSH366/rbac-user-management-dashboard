@@ -74,7 +74,7 @@ function Nav() {
               value={search}
             />
 
-            {/* ❌ Clear */}
+            {/* Clear */}
             {search && (
               <RxCross2
                 size={20}

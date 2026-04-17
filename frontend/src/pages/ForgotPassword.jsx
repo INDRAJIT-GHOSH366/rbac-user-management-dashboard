@@ -25,11 +25,11 @@ function ForgotPassword() {
       );
       setLoading(false);
       setErr("");
-      console.log(result);
+     
       setStep(2);
     } catch (error) {
       setLoading(false);
-      console.log("Backend error message:", error);
+      
       setErr(error.response.data.message);
     }
   };
@@ -44,11 +44,11 @@ function ForgotPassword() {
       );
       setLoading(false);
       setErr("");
-      console.log(result);
+      
       setStep(3);
     } catch (error) {
       setErr(error.response.data.message);
-      console.log("Backend error message:", error.response?.data);
+      
       setLoading(false);
     }
   };
@@ -69,12 +69,12 @@ function ForgotPassword() {
       );
       setLoading(false);
       setErr("");
-      console.log(result);
+      
       navigate("/signin");
     } catch (error) {
       setLoading(false);
       setErr(error.response.data.message);
-      console.log("Backend error message:", error.response?.data);
+      
     }
   };
   return (

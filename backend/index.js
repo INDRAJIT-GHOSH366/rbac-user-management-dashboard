@@ -13,7 +13,7 @@ import userRouter from "./routes/user.routes.js";
 const app=express();
 const port=process.env.PORT || 5000;
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:"https://rbac-user-management-vy5r.onrender.com",
     credentials:true 
     }
 ))
@@ -26,17 +26,11 @@ app.use((req, res, next) => {
 
 app.use("/api/auth",authRouter);
 app.use("/api/user",userRouter);
-// app.use("/api/shop",shopRouter);
-// app.use("/api/item",itemRouter);
-// app.use("/api/order", orderRouter);
-
 
 
 app.listen(port,()=>{
     connectDb();
     console.log(`Server Started at ${port}`);
-    console.log("THIS IS MY REAL SERVER FILE ✅");
-    // console.log("shopRouter type =>", typeof shopRouter);
     
 
 });
